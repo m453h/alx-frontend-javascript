@@ -6,7 +6,6 @@ namespace Subjects {
     experienceTeachingJava?: number;
   }
 
-
   export class Java extends Subject {
 
     getRequirements(): string {

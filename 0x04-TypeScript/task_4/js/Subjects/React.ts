@@ -6,7 +6,6 @@ namespace Subjects {
     experienceTeachingReact?: number;
   }
 
-
   export class React extends Subject {
 
     getRequirements(): string {

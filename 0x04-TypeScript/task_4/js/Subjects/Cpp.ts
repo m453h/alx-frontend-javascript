@@ -6,7 +6,6 @@ namespace Subjects {
     experienceTeachingC?: number;
   }
 
-
   export class Cpp extends Subject {
 
     getRequirements(): string {
