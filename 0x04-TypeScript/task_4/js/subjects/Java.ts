@@ -1,11 +1,11 @@
-import { Subjects as s } from "./Subject";
+/// <reference path="Subject.ts" />
 
 namespace Subjects {
   export interface Teacher {
     experienceTeachingJava?: number;
   }
 
-  export class Java extends s.Subject {
+  export class Java extends Subject {
 
     getRequirements(): string {
       return "Here is the list of requirements for Java";
@@ -13,7 +13,7 @@ namespace Subjects {
 
     getAvailableTeacher(): string {
       
-      if (this.teacher && this.teacher.experienceTeachingJava !== undefined) {
+      if (this.teacher && this.teacher.experienceTeachingJava > 0) {
         return `Available Teacher: ${this.teacher.firstName}`;
       } else {
         return "No available teacher";
@@ -21,5 +21,3 @@ namespace Subjects {
     }
   }
 }
-
-export const java = new Subjects.Java();
