@@ -1,12 +1,12 @@
-/// <reference path="Teacher.ts" />
-/// <reference path="Subject.ts" />
+import { Subjects as s } from "./Subject";
+import { Subjects as t } from "./Teacher";
 
 namespace Subjects {
-  export interface Teacher {
+  export interface Teacher extends t.Teacher {
     experienceTeachingC?: number;
   }
 
-  export class Cpp extends Subject {
+  export class Cpp extends s.Subject {
 
     getRequirements(): string {
       return "Here is the list of requirements for Cpp";
@@ -22,3 +22,11 @@ namespace Subjects {
     }
   }
 }
+
+export const cpp =  new Subjects.Cpp();
+
+export const cTeacher: Subjects.Teacher = {
+  firstName: "Michael",
+  lastName: "Hudson",
+  experienceTeachingC: 10,
+};
