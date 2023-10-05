@@ -13,10 +13,10 @@ const firstStudent: Student = {
 };
 
 const secondStudent: Student = {
-        firstName: "Gabriel",
-        lastName: "Hudson",
-        age: 34,
-        location: "Arusha"
+  firstName: "Gabriel",
+  lastName: "Hudson",
+  age: 34,
+  location: "Arusha"
 };
 
 const studentsList: Student[] = [firstStudent, secondStudent];
