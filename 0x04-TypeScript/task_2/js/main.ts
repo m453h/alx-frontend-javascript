@@ -42,7 +42,7 @@ class Teacher implements TeacherInterface {
   }
 }
 
-function createEmployee(salary: number | string) {
+export function createEmployee(salary: number | string) {
   if (typeof salary === "number" && salary < 500) {
     return new Teacher();
   } else {
@@ -50,11 +50,11 @@ function createEmployee(salary: number | string) {
   }
 }
 
-function isDirector(employee: Director | Teacher): employee is Director {
+export function isDirector(employee: Director | Teacher): employee is Director {
   return (employee as Director).workDirectorTasks !== undefined;
 }
 
-function executeWork(employee: Director | Teacher) {
+export function executeWork(employee: Director | Teacher) {
   if (isDirector(employee)) {
     console.log(employee.workDirectorTasks());
   } else {
@@ -62,13 +62,12 @@ function executeWork(employee: Director | Teacher) {
   }
 }
 
-type Subjects = "Math" | "History";
+export type Subjects = "Math" | "History";
 
-function teachClass(todayClass: Subjects): string {
+export function teachClass(todayClass: Subjects): string {
   if (todayClass === "Math") {
     return "Teaching Math";
   } else if (todayClass === "History") {
     return "Teaching History";
   }
 }
-
